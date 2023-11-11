@@ -16,8 +16,10 @@ var builder = WebApplication.CreateBuilder(args);
 //     options.UseInMemoryDatabase("TareasDB");
 // });
 
-builder.Services.AddSqlServer<TareasContext>("Data Source=(local); Initial Catalog= TareasDb;  Integrated Security=True; TrustServerCertificate=True");
+// Configuracion de entity framework
+// builder.Services.AddSqlServer<TareasContext>("Data Source=(local); Initial Catalog= TareasDb;  Integrated Security=True; TrustServerCertificate=True");
 
+builder.Services.AddSqlServer<TareasContext>(builder.Configuration.GetConnectionString("ConexionDB"));
 
 
 var app = builder.Build();
