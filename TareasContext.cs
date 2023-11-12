@@ -17,7 +17,7 @@ public class TareasContext: DbContext{
             Categoria.HasKey(p => p.CategoriaId);
             // Configuracion de las propiedades 
             Categoria.Property(p => p.Nombre).IsRequired().HasMaxLength(150);
-
+            Categoria.Property(p => p.Peso);
             Categoria.Property(p => p.Descripcion);
         });
 
