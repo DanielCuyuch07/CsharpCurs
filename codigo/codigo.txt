@@ -1,0 +1,16 @@
+program.cs 
+
+/* 
+
+    Configurar Entity Framework antes de definir rutas
+    Util : Base  de datos en memoria 
+ */
+
+
+// builder.Services.AddDbContext<TareasContext>(options =>
+// {
+//     options.UseInMemoryDatabase("TareasDB");
+// });
+
+// Configuracion de entity framework
+// builder.Services.AddSqlServer<TareasContext>("Data Source=(local); Initial Catalog= TareasDb;  Integrated Security=True; TrustServerCertificate=True");
